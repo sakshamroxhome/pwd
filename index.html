@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>SRX Trading Accounts</title>
-<link rel="icon" href="logo.png" type="image/png">
+<link rel="icon" href="bear.png" type="image/png">
 
 <style>
 :root {
@@ -43,50 +43,32 @@ body {
     position: relative;
 }
 
-/* Heading */
 h1 {
     margin: 0 0 5px 0;
     font-size: 30px;
     letter-spacing: 3px;
 }
 
-/* Logo below heading */
 .logo {
-    width: 920px; /* horizontal stretched */
+    width: 920px;
     height: 350px;
     margin: 0 0 10px 0;
     position: relative;
-    left: -20px; /* slight left shift */
-    transform: rotate(0deg); /* straight */
+    left: -20px;
+    transform: rotate(0deg);
     filter: drop-shadow(0 0 20px #00ff00);
     animation: logoAnimate 3s infinite ease-in-out;
 }
 
-/* Logo animation */
 @keyframes logoAnimate {
-    0% {
-        transform: scale(1) rotate(0deg);
-        filter: drop-shadow(0 0 20px #00ff00);
-    }
-    25% {
-        transform: scale(1.02) rotate(0deg);
-        filter: drop-shadow(0 0 30px #00ff00);
-    }
-    50% {
-        transform: scale(1) rotate(0deg) translateY(-5px);
-        filter: drop-shadow(0 0 20px #00ff00);
-    }
-    75% {
-        transform: scale(1.02) rotate(0deg) translateY(5px);
-        filter: drop-shadow(0 0 30px #00ff00);
-    }
-    100% {
-        transform: scale(1) rotate(0deg);
-        filter: drop-shadow(0 0 20px #00ff00);
-    }
+    0% { transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 20px #00ff00);}
+    25% { transform: scale(1.02) rotate(0deg); filter: drop-shadow(0 0 30px #00ff00);}
+    50% { transform: scale(1) rotate(0deg) translateY(-5px); filter: drop-shadow(0 0 20px #00ff00);}
+    75% { transform: scale(1.02) rotate(0deg) translateY(5px); filter: drop-shadow(0 0 30px #00ff00);}
+    100% { transform: scale(1) rotate(0deg); filter: drop-shadow(0 0 20px #00ff00);}
 }
 
-/* Table */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -107,6 +89,37 @@ td {
     color: var(--neon);
 }
 
+
+.cell-content {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+.cell-content .value {
+    display: inline-block;
+    min-width: 220px; 
+    word-break: break-all;
+}
+
+.cell-content .copy-btn {
+    margin-left: 8px;
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    background: url('copy.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px #00ff00);
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.cell-content .copy-btn:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px #00ff00);
+}
+
 .index {
     width: 40px;
     color: var(--text-dim);
@@ -120,7 +133,7 @@ tr:hover {
     background: rgba(0,255,0,0.05);
 }
 
-/* Login Button */
+
 .login-btn {
     display: inline-block;
     margin-top: 10px;
@@ -140,7 +153,7 @@ tr:hover {
     box-shadow: 0 0 20px rgba(0,255,0,0.35);
 }
 
-/* Cursor effect */
+
 .cursor::after {
     content: "▋";
     animation: blink 1.2s infinite;
@@ -149,7 +162,6 @@ tr:hover {
 @keyframes blink {
     50% { opacity: 0; }
 }
-
 </style>
 </head>
 
@@ -159,7 +171,6 @@ tr:hover {
 
     <h1>SRX TRADING ACCOUNTS<span class="cursor"></span></h1>
 
-    <!-- Logo below heading -->
     <img src="logo.png" alt="SRX Logo" class="logo">
 
     <table>
@@ -170,45 +181,111 @@ tr:hover {
         </tr>
         <tr>
             <td class="index">1</td>
-            <td>srxtrade1@gmail.com</td>
-            <td>6944a84c6c</td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">srxtrade1@gmail.com</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">6944a84c6c</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
         </tr>
         <tr>
             <td class="index">2</td>
-            <td>srxtrade2@gmail.com</td>
-            <td>9ec60f37bd</td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">srxtrade2@gmail.com</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">9ec60f37bd</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
         </tr>
         <tr>
             <td class="index">3</td>
-            <td>srxtrade3@gmail.com</td>
-            <td>96cf9e0730</td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">srxtrade3@gmail.com</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">96cf9e0730</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
         </tr>
         <tr>
             <td class="index">4</td>
-            <td>srxtrade4@gmail.com</td>
-            <td>4ee9ec7fab</td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">srxtrade4@gmail.com</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">4ee9ec7fab</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
         </tr>
         <tr>
             <td class="index">5</td>
-            <td>srxtrade55@gmail.com</td>
-            <td>aa4bd67e97</td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">srxtrade55@gmail.com</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">aa4bd67e97</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
         </tr>
         <tr>
             <td class="index">6</td>
-            <td>ladoorox12345@gmail.com</td>
-            <td>temp</td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">ladoorox12345@gmail.com</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
+            <td>
+                <div class="cell-content">
+                    <span class="value">temp</span>
+                    <button class="copy-btn" onclick="copyText(this)"></button>
+                </div>
+            </td>
         </tr>
     </table>
 
-    <a
-        class="login-btn"
-        href="https://mtr-competition.fundingpips.com/login"
-        target="_blank"
-    >
+    <a class="login-btn" href="https://mtr-competition.fundingpips.com/login" target="_blank">
         LOGIN
     </a>
 
 </div>
+
+<script>
+function copyText(btn) {
+    const text = btn.previousElementSibling.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+        btn.style.filter = 'drop-shadow(0 0 10px #00ff00)';
+        setTimeout(() => btn.style.filter = 'drop-shadow(0 0 2px #00ff00)', 300);
+    });
+}
+</script>
 
 </body>
 </html>
