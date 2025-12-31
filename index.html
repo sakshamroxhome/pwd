@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <title>SRX Trading Accounts</title>
+<link rel="icon" href="logo.png" type="image/png">
 
 <style>
 :root {
-    --neon: #00f0c8;
-    --bg: #05070b;
-    --panel: rgba(12, 16, 22, 0.9);
-    --border: rgba(0, 240, 200, 0.25);
-    --text-dim: #9aaec2;
+    --neon: #00ff00;
+    --bg: #001100;
+    --panel: rgba(0, 34, 0, 0.95);
+    --border: rgba(0,255,0,0.25);
+    --text-dim: #66ff66;
 }
 
 * {
@@ -19,10 +20,8 @@
 
 body {
     margin: 0;
-    height: 100vh;
-    background:
-        radial-gradient(900px at 50% 20%, rgba(0,240,200,0.08), transparent),
-        var(--bg);
+    min-height: 100vh;
+    background: var(--bg);
     font-family: "JetBrains Mono", "Courier New", monospace;
     color: var(--neon);
     display: flex;
@@ -30,25 +29,41 @@ body {
     align-items: center;
 }
 
-/* Main Container */
 .panel {
-    width: 860px;
-    padding: 40px 44px;
+    width: 950px;
+    padding: 20px 44px;
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 18px;
     box-shadow:
-        0 0 40px rgba(0,240,200,0.15),
-        inset 0 0 30px rgba(0,0,0,0.7);
+        0 0 40px rgba(0,255,0,0.2),
+        inset 0 0 30px rgba(0,50,0,0.7);
     text-align: center;
     backdrop-filter: blur(12px);
+    position: relative;
 }
 
 /* Heading */
 h1 {
-    margin: 0 0 28px 0;
-    font-size: 24px;
+    margin: 0 0 5px 0;
+    font-size: 30px;
     letter-spacing: 3px;
+}
+
+/* Logo below heading */
+.logo {
+    width: 900px;
+    height: 350px;
+    margin: 0 0 10px 0;
+    animation: zoomIn 1s ease forwards;
+    position: relative;
+    left: -20px; /* shift logo slightly left */
+}
+
+/* Logo zoom animation */
+@keyframes zoomIn {
+    0% { transform: scale(0.3); opacity: 0; }
+    100% { transform: scale(1.0); opacity: 1; }
 }
 
 /* Table */
@@ -69,6 +84,7 @@ th {
 td {
     padding: 14px 0;
     font-size: 14px;
+    color: var(--neon);
 }
 
 .index {
@@ -77,11 +93,11 @@ td {
 }
 
 tr:not(:last-child) td {
-    border-bottom: 1px dashed rgba(0,240,200,0.18);
+    border-bottom: 1px dashed rgba(0,255,0,0.18);
 }
 
 tr:hover {
-    background: rgba(0,240,200,0.04);
+    background: rgba(0,255,0,0.05);
 }
 
 /* Login Button */
@@ -100,11 +116,11 @@ tr:hover {
 }
 
 .login-btn:hover {
-    background: rgba(0,240,200,0.1);
-    box-shadow: 0 0 20px rgba(0,240,200,0.35);
+    background: rgba(0,255,0,0.1);
+    box-shadow: 0 0 20px rgba(0,255,0,0.35);
 }
 
-/* Cursor */
+/* Cursor effect */
 .cursor::after {
     content: "▋";
     animation: blink 1.2s infinite;
@@ -113,6 +129,7 @@ tr:hover {
 @keyframes blink {
     50% { opacity: 0; }
 }
+
 </style>
 </head>
 
@@ -121,6 +138,9 @@ tr:hover {
 <div class="panel">
 
     <h1>SRX TRADING ACCOUNTS<span class="cursor"></span></h1>
+
+    <!-- Logo below heading -->
+    <img src="logo.png" alt="SRX Logo" class="logo">
 
     <table>
         <tr>
