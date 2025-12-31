@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SRX Trading Accounts</title>
+
+<style>
+:root {
+    --neon: #00f0c8;
+    --bg: #05070b;
+    --panel: rgba(12, 16, 22, 0.9);
+    --border: rgba(0, 240, 200, 0.25);
+    --text-dim: #9aaec2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background:
+        radial-gradient(900px at 50% 20%, rgba(0,240,200,0.08), transparent),
+        var(--bg);
+    font-family: "JetBrains Mono", "Courier New", monospace;
+    color: var(--neon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.panel {
+    width: 860px;
+    padding: 40px 44px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow:
+        0 0 40px rgba(0,240,200,0.15),
+        inset 0 0 30px rgba(0,0,0,0.7);
+    text-align: center;
+    backdrop-filter: blur(12px);
+}
+
+/* Heading */
+h1 {
+    margin: 0 0 28px 0;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 34px;
+}
+
+th {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+.index {
+    width: 40px;
+    color: var(--text-dim);
+}
+
+tr:not(:last-child) td {
+    border-bottom: 1px dashed rgba(0,240,200,0.18);
+}
+
+tr:hover {
+    background: rgba(0,240,200,0.04);
+}
+
+/* Login Button */
+.login-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 14px 38px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--neon);
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.login-btn:hover {
+    background: rgba(0,240,200,0.1);
+    box-shadow: 0 0 20px rgba(0,240,200,0.35);
+}
+
+/* Cursor */
+.cursor::after {
+    content: "▋";
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+
+    <h1>SRX TRADING ACCOUNTS<span class="cursor"></span></h1>
+
+    <table>
+        <tr>
+            <th class="index">#</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+        <tr>
+            <td class="index">1</td>
+            <td>srxtrade1@gmail.com</td>
+            <td>6944a84c6c</td>
+        </tr>
+        <tr>
+            <td class="index">2</td>
+            <td>srxtrade2@gmail.com</td>
+            <td>9ec60f37bd</td>
+        </tr>
+        <tr>
+            <td class="index">3</td>
+            <td>srxtrade3@gmail.com</td>
+            <td>96cf9e0730</td>
+        </tr>
+        <tr>
+            <td class="index">4</td>
+            <td>srxtrade4@gmail.com</td>
+            <td>4ee9ec7fab</td>
+        </tr>
+        <tr>
+            <td class="index">5</td>
+            <td>srxtrade55@gmail.com</td>
+            <td>aa4bd67e97</td>
+        </tr>
+        <tr>
+            <td class="index">6</td>
+            <td>ladoorox12345@gmail.com</td>
+            <td>temp</td>
+        </tr>
+    </table>
+
+    <a
+        class="login-btn"
+        href="https://mtr-competition.fundingpips.com/login"
+        target="_blank"
+    >
+        LOGIN
+    </a>
+
+</div>
+
+</body>
+</html>
